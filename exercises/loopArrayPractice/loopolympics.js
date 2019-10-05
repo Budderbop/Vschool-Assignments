@@ -29,22 +29,22 @@
 // console.log(fuirty)
 
 //Silver 
-const budderPeople= [
-    {
-        name: "Jonathon Livingston Seagull",
-        occupation: "Seagull"
-    },
-    {
-        name: "Matieu Mconnahey",
-        occupation: "A Guy"
-    },
-    {
-        name: "Budder",
-        occupation: "Literally God"
-    }
-]
-const namesThatMatter= []
-const occupations= []
+// const budderPeople= [
+//     {
+//         name: "Jonathon Livingston Seagull",
+//         occupation: "Seagull"
+//     },
+//     {
+//         name: "Matieu Mconnahey",
+//         occupation: "A Guy"
+//     },
+//     {
+//         name: "Budder",
+//         occupation: "Literally God"
+//     }
+// ]
+// const namesThatMatter= []
+// const occupations= []
 // for (i = 0; i < budderPeople.length; i++){
 //     console.log(budderPeople[i].name)
 // }
@@ -53,11 +53,30 @@ const occupations= []
 //     namesThatMatter.push(budderPeople[i].name)
 //     occupations.push(budderPeople[i].occupation)
 // }
-console.log("Names Array", namesThatMatter, "Occupations Array", occupations)
 
-for(i = 0; i < budderPeople.length; i++){
-    if(i % 2 !== 0){
-        namesThatMatter.push(budderPeople[i].name)
+
+// for(i = 0; i < budderPeople.length; i++){
+//     if(i % 2 === 0 +1){
+//         occupations.push(budderPeople[i].occupation)
+//     }
+//     else if(i % 2 === 0){
+//         namesThatMatter.push(budderPeople[i].name)
+//     }
+// }
+
+// console.log(namesThatMatter, occupations)
+const matrix = []
+for (i = 0; i < 3; i++){
+    matrix.push([])
+    for (j = 0; j < 3; j++){
+        matrix[i].push(0)
+        
+}
+}
+console.log(matrix)
+for (i = 0; i < 3; i++){
+    for(j = 0; j < 3; j++){
+        matrix[i][j] = "x"
     }
 }
-
+console.log(matrix)
