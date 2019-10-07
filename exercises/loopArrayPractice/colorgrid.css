@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 0px;
+    /* margin: auto; why does it mirror it to the other side? */
+}
+div {
+    height: 25vh;
+}
+
+/* border: 1px solid ; */
+/* height: 25vh; */
+.pink {
+    width: 100vw;
+    background-color: #F5C6D6;
+    display: inline-block;
+    border: 20px solid white;
+}
+/* height: 25vh; */
+.dark-pink {
+    width: 25vw;
+    background: #EE2E84;
+    border: 20px solid white;
+    display: inline-block;
+}
+/* height: 25vh; */
+.blue {
+    width: 50vw;
+    background:#85CFD8;
+    display: inline-block;
+    border: 20px solid white;
+}
+.green {
+    width: 75vw;
+    background: #8DC63F;
+    border: 20px solid white;
+    display: inline-block;  
+}
+
+.orange {
+    width: 25vw;
+    background: #E76E34;
+    border: 20px solid white;
+    display: inline-block;
+}
+.line1 {
+    height: 100vh;
+    width: 20px;
+    background: indianred;
+    position: relative;
+    margin-bottom: -717px;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+    left: 170px;
+    vertical-align: bottom;
+    /* z-index: 2; */
+}
+.line2 {
+    height: 100vh;
+    width: 20px;
+    background: turquoise;
+    position: relative;
+    margin-bottom: -717px;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+    left: 530px;
+    /* z-index: 2; */
+}
+.line3 {
+    height: 100vh;
+    width: 20px;
+    background: palegreen;
+    position: relative;
+    margin-bottom: -717px;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+    left: 890px;
+}
+.line4 {
+    height: 100vh;
+    width: 20px;
+    background: black;
+    position: relative;
+    margin-bottom: -717px;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+    left: 1250px;
+}
+
+
+.boxes {
+    position: absolute;
+    /* z-index: 0; */
+}

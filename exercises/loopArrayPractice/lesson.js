@@ -41,20 +41,20 @@
 // }
 // console.log(halvsies("ooogieboogiewoogiebawoogy"))
 
-// const arrgggPirate = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
-// function fibonacci (n){
-//     for (i = 0; i < n; i++){
-//         return arrgggPirate[i]
-//     }
-// }
-// let n = fibonacci(n)
-// console.log(fibonacci(66))
-
-function jones(api){
-    if(api <= 4235897){
-        return api + api
-    } else {
-        return api.slice(0, api / 2)
+const arrgggPirate = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+function fibonacci (n){
+    for (i = 0; i < n; i++){
+        return arrgggPirate[i]
     }
 }
-console.log(jones("4540853"))
+let n = fibonacci(n)
+console.log(fibonacci("66"))
+
+// function jones(api){
+//     if(api <= 4235897){
+//         return api + api
+//     } else {
+//         return api.slice(0, api / 2)
+//     }
+// }
+// console.log(jones("4540853"))
