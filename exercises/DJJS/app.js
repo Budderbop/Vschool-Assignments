@@ -1,6 +1,8 @@
 const box = document.getElementById('box')
 const textBox = document.getElementById('textBox')
 const boxes = document.getElementsByClassName('boxes')
+const html = document.getElementsByTagName('html')
+const div = document.getElementsByTagName('div')
 
 box.addEventListener('mouseover', function(){
     this.style.backgroundColor = 'blue'
@@ -17,9 +19,14 @@ box.addEventListener('mouseup', function(){
 box.addEventListener('mouseenter', function(){
     this.style.backgroundColor = 'pink'
 })
-box.addEventListener('mouseover', function(){
-    event.relatedTarget.style.backgroundColor = 'blue'
-})
+// relatedTarget.addEventListener('mouseover', function(){
+//     // if(relatedTarget === div){
+//     event.div.style.backgroundColor = 'blue'}
+// // }
+// )
+
+
+
 box.addEventListener('dblclick', function(){
     this.style.backgroundColor = 'green'
 })
@@ -49,12 +56,22 @@ document.addEventListener('keypress', function(){
         boxes[i].style.backgroundColor = 'yellow'
     } else if (event.key === 'o'){
         boxes[i].style.backgroundColor = 'orange'
-    } else if (event.key === 'z'){
-        document.style.backgroundColor = 'white'
-
+    } else if (event.key === ' '){
+        boxes[i].style.backgroundColor = 'white'
     } 
-}})
-box.addEventListener('dragstart', function(){
+    }})
+    
+  
+    document.querySelectorAll('*').forEach(function(item){
+        document.addEventListener('keypress', function(){
+            if (event.key === 'z'){
+                item.style.backgroundColor = 'white'
+            }
+        })
+    })
+    
+    
+    box.addEventListener('dragstart', function(){
     this.style.backgroundColor = 'black'
 })
 for (let i = 0; i < boxes.length; i++){

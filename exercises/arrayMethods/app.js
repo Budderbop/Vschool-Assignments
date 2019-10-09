@@ -21,13 +21,22 @@ var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 // lengthy = () => vegetables.push(vegetables.length)
 // lengthy()
 
-const food = []
-pushypushy = () => {
-    let newArrgh = fruit.concat(vegetables)
-    food.push(newArrgh)
+let food 
+const pushypushy = () => {
+    // food.push(fruit.concat(vegetables))
+    // food.push(newArrgh)
+    food = fruit.concat(vegetables)
+    return food
 }
 pushypushy()
+const instinct = food.slice(4,6)
+food.reverse()
+let smoothie = food.join(' ')
+
 
 console.log("Food:", food)
 console.log("Fruit:", fruit)
 console.log("Vegetables:", vegetables)
+console.log('instincts: ' +instinct)
+console.log(food)
+console.log(smoothie)

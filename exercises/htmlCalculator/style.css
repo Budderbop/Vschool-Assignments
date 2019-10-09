@@ -1,0 +1,63 @@
+.add {
+    background: turquoise;
+    width: 62px;
+}
+.subtract {
+    background: green;
+    width: 62px;
+}
+.multiply {
+    background: blue;
+    width: 62px;
+}
+body {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5%
+
+}
+input::placeholder{
+    text-align: center;
+}
+form > input{
+    padding: 10px;
+}
+h1 {
+    display: inline-block;
+    position: absolute;
+    left: 190px;
+    top: 30px;
+}
+#h11 {
+    left: 190px;
+}
+#h12 {
+    left: 606px;
+}
+#h13 {
+    left: 1023px;
+}
+h2 {
+    display: inline-block;
+    position: absolute;
+    left: 224px;
+}
+#answer1 {
+    left: 224px;
+}
+#answer2 {
+    left: 640px;
+}
+#answer3 {
+    left: 1057px;
+}
+.italic {
+    font-style: italic;
+    position: absolute;
+    font-size: 100px;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+}
