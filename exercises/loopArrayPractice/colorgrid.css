@@ -50,11 +50,15 @@ div {
     background: indianred;
     position: relative;
     margin-bottom: -717px;
-    border-top: 20px solid white;
-    border-bottom: 20px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
     left: 170px;
     vertical-align: bottom;
     /* z-index: 2; */
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    transform: skew(0deg, 45deg)
+    /* transform-origin: left */
 }
 .line2 {
     height: 100vh;
@@ -93,3 +97,9 @@ div {
     position: absolute;
     /* z-index: 0; */
 }
+/* .break{
+    height: 100px;
+    width: 20px;
+    background: black;
+    transform:skew(90deg, 0deg)
+} */

@@ -1,0 +1,25 @@
+#box {
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    position: fixed;
+}
+body {
+    margin: auto;
+    width: 80%;
+    margin-top: 60px;
+}
+#textBox {
+    width: 10%;
+    height: 10%;
+    right: 0;
+    bottom: 0;
+    border: 2px solid green;
+    position: absolute;
+
+}
+.boxes {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
