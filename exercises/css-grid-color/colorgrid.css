@@ -97,9 +97,9 @@ div {
     position: absolute;
     /* z-index: 0; */
 }
-/* .break{
+.break{
     height: 100px;
     width: 20px;
     background: black;
-    transform:skew(90deg, 0deg)
-} */
+    /* transform:skew(90deg, 0deg) */
+}

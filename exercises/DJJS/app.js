@@ -19,11 +19,11 @@ box.addEventListener('mouseup', function(){
 box.addEventListener('mouseenter', function(){
     this.style.backgroundColor = 'pink'
 })
-// relatedTarget.addEventListener('mouseover', function(){
-//     // if(relatedTarget === div){
-//     event.div.style.backgroundColor = 'blue'}
-// // }
-// )
+document.addEventListener('mouseover', function(){
+    if(div){
+    event.div.style.backgroundColor = 'blue'}
+}
+)
 
 
 

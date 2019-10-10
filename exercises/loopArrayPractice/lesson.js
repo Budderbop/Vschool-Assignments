@@ -43,12 +43,12 @@
 
 const arrgggPirate = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 function fibonacci (n){
-    for (i = 0; i < n; i++){
+    for (i = 0; i < n.length; i++){
         return arrgggPirate[i]
     }
 }
-let n = fibonacci(n)
-console.log(fibonacci("66"))
+fibonacci()
+console.log(fibonacci("6"))
 
 // function jones(api){
 //     if(api <= 4235897){
