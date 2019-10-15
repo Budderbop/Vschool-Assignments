@@ -1,0 +1,52 @@
+/* .box {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+} */
+
+/* @media (min-width: 800px) {
+    .box {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200) {
+    .box {
+        width: 900px;
+    }
+} */
+/* 
+@media (max-width: 1200px) {
+    .box {
+        background-color: purple;
+    }
+}
+
+@media (max-width: 800px) {
+    .box {
+        background-color: green;
+       
+    }
+    img {
+        display: none;  /* to make a picture dissapear at a certain width */
+    /* }
+} */ 
+/* 
+@media (min-width: 800px) and (max-width: 1200px) {
+    .box {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 800px) , (min-width: 1200px) {
+    .box {
+        background-color: green;
+    }
+} */
+
+/* min-width from px and above. place from low value to high.
+max-width from px amount and below place from high value to low.
+and
+'
+*/
