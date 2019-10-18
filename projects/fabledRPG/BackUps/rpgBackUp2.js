@@ -9,16 +9,11 @@
 
 const readLine = require("readline-sync")
 
-const print = () => {
-    console.log(guy.name, guy.inventory, guy.health)
-}
+let inventory = []
+let losers = []
 let isAlive = true
 let isDay = false
-const guy = {
-    name = "Jeremy",
-    inventory = [],
-    health = 102
-}
+const name = "Jeremy"
 let hasWon = false
 
 const aCowardsDeath = () => {
@@ -133,48 +128,5 @@ const funny = () => {
 setTimeout(function(){
     funny()
 }, 10000);
-
-while(isAlive === true && hasWon === false){
-   let hmm = readLine.keyIn(`Do something! Walk(w) `, {limit: 'w'})
-    if(hmm=== 0){
-        
-    }
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

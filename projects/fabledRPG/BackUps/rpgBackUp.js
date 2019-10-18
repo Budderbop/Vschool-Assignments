@@ -9,16 +9,11 @@
 
 const readLine = require("readline-sync")
 
-const print = () => {
-    console.log(guy.name, guy.inventory, guy.health)
-}
+let inventory = []
+let losers = []
 let isAlive = true
 let isDay = false
-const guy = {
-    name = "Jeremy",
-    inventory = [],
-    health = 102
-}
+const name = "Jeremy"
 let hasWon = false
 
 const aCowardsDeath = () => {
@@ -40,20 +35,20 @@ const aCowardsDeath = () => {
 // }
 
 // function JeremyInventory(name, attack, spells){
-    //     this.name = name,
-    //     this.attack = attack,
-    //     this.spells = spells
-    // }
-    // const weak1CssStaff = JeremyInventory("Weak Css Staff", magicDamage, spellMastery)
-    
-    
-    
-    
+//     this.name = name,
+//     this.attack = attack,
+//     this.spells = spells
+// }
+// const weak1CssStaff = JeremyInventory("Weak Css Staff", magicDamage, spellMastery)
+
+
+
+
 console.log("beggining introduction(change later to make swaggy)")
 
 const hello = readLine.keyInSelect(["Continue"], null, {cancel: `Die`})
 if(hello === 0){
-    
+
 }
 else {
     aCowardsDeath()
@@ -65,18 +60,14 @@ if (badName === "Jeremy" || badName === "jeremy"){
     console.log("My, what a splendid name!")
 } else {
     console.log(`Hmmmmm... ${badName} kinda sucks. What about Jeremy? `)
-    const badNameAnswer = readLine.keyInSelect([".... okay?"], null, {cancel: `Die`})
-    if (badNameAnswer === 0){
-        
-    } else {
-        aCowardsDeath()
-    }
+    const optionsName = [" .... okay."]
+    const badNameAnswer = readLine.keyInSelect(optionsName)
     console.log("I don't like your attitude, but whatever, let's move on.")
 }
 
-const hello1 = readLine.keyInSelect(["Continue"], null, {cancel: `Die`})
-if(hello1 === 0){
-    
+readLine.keyInSelect(["Continue"], null, {cancel: `Die`})
+if(hello === 0){
+
 }
 else {
     aCowardsDeath()  
@@ -84,7 +75,7 @@ else {
 
 const optionsSpecialty = ["Wizard Hands", "Barbarian Bloodlust", "Knight's Honor", "Martial Arts", "Archery", "Being A Guy"]
 console.log("What is your specialty?")
-const specialtyChoice = readLine.keyInSelect(optionsSpecialty, null, {cancel: `Die`})
+const specialtyChoice = readLine.keyInSelect(optionsSpecialty)
 if (specialtyChoice === 0){
     console.log("Ahhh a wizard? Makes sense. But it looks like you have no skills. You are basically a slightly better Ethan, and will have to go learn your own skills.")
 } else if (specialtyChoice === 1){
@@ -97,84 +88,25 @@ if (specialtyChoice === 0){
     console.log(`Hmmm weird, you don't quite have any aptitude for ${optionsSpecialty[4]}. You are basically Ethan, and will have to go learn your own skills.`)
 } else if (specialtyChoice === 5){
     console.log(`Hmmm weird, you don't quite have any aptitude for ${optionsSpecialty[5]}. You are basically Ethan, and will have to go learn your own skills.`)
-} else {
-    aCowardsDeath()
 }
 
-const hello2 = readLine.keyInSelect(["Continue"], null, {cancel: `Die`})
-if(hello2 === 0){
-    
+readLine.keyInSelect(["Continue"], null, {cancel: `Die`})
+if(hello === 0){
+
 }
 else {
     aCowardsDeath()
 }
 
-console.log("Now, hurry up and start your journey. I know you can do it.                                                                 Haaa he's so screwed, huh, is this still on?")
+console.log("Now, hurry up and start your journey. I know you can do it.                                                                 Haaa he's so screwed, huh, this is still on?")
 
-const hello3 = readLine.keyInSelect(["Start Your Adventure!"], null, {cancel: `Die`})
-if(hello3 === 0){
-    
+readLine.keyInSelect(["Start Your Adventure!"], null, {cancel: `Die`})
+if(hello === 0){
+
 }
 else {
     aCowardsDeath() 
 }
-        
-console.log("Huh? you thought you were playing a game? No, you are playing life fool!")
-
-const funny = () => {
-    const hello4 = readLine.keyInSelect(["Just kidding! Let's Start!"], null, {cancel: `Die`})
-    if(hello4 === 0){
-
-    } else {
-        aCowardsDeath()
-    }
-}
-
-setTimeout(function(){
-    funny()
-}, 10000);
-
-while(isAlive === true && hasWon === false){
-   let hmm = readLine.keyIn(`Do something! Walk(w) `, {limit: 'w'})
-    if(hmm=== 0){
-        
-    }
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
