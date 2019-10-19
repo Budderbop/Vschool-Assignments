@@ -9,11 +9,16 @@
 
 const readLine = require("readline-sync")
 
-let inventory = []
-let losers = []
+const print = () => {
+    console.log(guy.name, guy.inventory, guy.health)
+}
 let isAlive = true
 let isDay = false
-const name = "Jeremy"
+const guy = {
+    name: "Jeremy",
+    inventory: [],
+    health: 102
+}
 let hasWon = false
 
 const aCowardsDeath = () => {
@@ -79,7 +84,7 @@ else {
 
 const optionsSpecialty = ["Wizard Hands", "Barbarian Bloodlust", "Knight's Honor", "Martial Arts", "Archery", "Being A Guy"]
 console.log("What is your specialty?")
-const specialtyChoice = readLine.keyInSelect(optionsSpecialty, null, {cancel: `Die`})
+const specialtyChoice = readLine.keyInSelect(optionsSpecialty, null, {cancel: `Dying`})
 if (specialtyChoice === 0){
     console.log("Ahhh a wizard? Makes sense. But it looks like you have no skills. You are basically a slightly better Ethan, and will have to go learn your own skills.")
 } else if (specialtyChoice === 1){
@@ -119,26 +124,28 @@ console.log("Huh? you thought you were playing a game? No, you are playing life 
 const funny = () => {
     const hello4 = readLine.keyInSelect(["Just kidding! Let's Start!"], null, {cancel: `Die`})
     if(hello4 === 0){
-
+        whileLoop()
     } else {
         aCowardsDeath()
     }
 }
 
+
 setTimeout(function(){
     funny()
 }, 10000);
 
-
+const whileLoop = () => {
 while(isAlive === true && hasWon === false){
-    let hmm = readLine.keyIn(`Do something! Walk(w) `, {limit: 'w'})
-     if(hmm === "w"){
-         console.log("ey")
-         //enemyencounter()
-         //findstuff()
-     } else if (hmm === "r"){
-         console.log(" argg")
-     }
- 
- 
- }
+   let hmm = readLine.keyIn(`Do something! Walk(w) `, {limit: 'w'})
+    if(hmm === "w"){
+        console.log("ey")
+        //enemyencounter()
+        //findstuff()
+    } else if (hmm === "r"){
+        console.log(" argg")
+    }
+
+
+}
+}
