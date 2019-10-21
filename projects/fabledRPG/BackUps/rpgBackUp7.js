@@ -40,12 +40,12 @@ const aCowardsDeath = () => {
     process.exit()
 }
 const anHonorableDeath = () => {
-    console.log("You are not as bad as I thought, since you are willing to fight and die in battle! Therefore you may keep your soul and move into another dimensions cowardly Jeremy. Or rest in peace knowing you are somewhat better than all those other cowardly Jeremys")
+    console.log("You are not as bad as I thought, since you are willing to fight and die in battle! Therefore you may keep your soul and move into another dimensions Jeremy. Or rest in peace knowing you are somewhat better than all those other cowardly Jeremys")
     const honorableDecision = readLine.keyInSelect(["Fight once more!"], null, {cancel: `Enjoy a longer nap.`})
     if(honorableDecision === 0){
         console.log("You have reincarnated as JEREMY!!!")
         isAlive = true
-        guy.stats.currentHealth = guy.stats.maxHealth
+        guy.status.currentHealth = get.status.maxHealth
         guy.inventory = []
         loserForest() // find a way to reset everything or at least items
     }
@@ -98,11 +98,10 @@ const loserForestEncounter = () => {
 const loserForestFight = () => {
     const random = Math.floor(Math.random()* 3)
     const enemy = loserForestEnemiesArray[random]
-    let run = false
     console.log("Enemy: ", enemy)
-    while(isAlive = true && enemy.health > 0 && !run){
+    while(isAlive = true && enemy.health > 0){
         if (guy.stats.currentHealth <= 0){
-            isAlive = false
+            let isAlive = false
             anHonorableDeath()
         }
         const enemyAttack = Math.ceil(Math.random()* enemy.damage) // required to stay in scope to know who the enemy is
@@ -110,49 +109,47 @@ const loserForestFight = () => {
         const fightBasics = readLine.keyIn(`A(n) ${enemy.name} has found you! What do you do? Nothing(n) Attack(a) Try to eat a bagel(b) Retreat like a coward(r) Check Inventory(i) Kill Yourself(k) `, {limit: 'n a b r i k'})//you fail to escape
         if(fightBasics === "b" && bagels >= 1){
             bagels -= 1
-            guy.stats.currentHealth += 100
-            console.log("How scrumptious! You gain 100 health")
+            guy.stats.currentHealth += 50
+            console.log("How scrumptious! You gain 50 health")
             console.log(`You now have ${guy.stats.currentHealth} HP`)
-        }  else if(bagels <= 0){
-            // console.log("You look, but find no more bagels, today is a sad day.")
-        }
-        
-        if(fightBasics === "n"){
-            console.log("Umm why is this an option?")
-        } else if (fightBasics === "a"){
-            console.log(`Your Damage: ${jeremyAttack}`)
-            console.log(`Enemy Damage: ${enemyAttack}`)
-            enemy.health -= jeremyAttack 
-            console.log(`The ${enemy.name} now has ${enemy.health} HP`)
-            console.log(`You hit for ${jeremyAttack} damage!`)
-        } else if (fightBasics === "r"){
-            runOne(run)
-        } else if (fightBasics === "i"){
-            console.log(print()) // later make the inventory interactive unlike a bitch who got lazy (me)
-        } else if (fightBasics === "k"){
-            console.log("There's lots of ways out for cowards, but this one is common.")
-            process.exit()                 // the time out might not work and may just skip on to the next thing
-        }
-        if(enemy.health <= 0){
-            guy.inventory.push(loserForestEnemyLoot[0,1,2])
-            console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
+            afterBagel()
         } else {
-            console.log(`The ${enemy.name} attacks!`)
-            guy.stats.currentHealth -= enemyAttack // it stops on this line
-            console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
-            console.log(`You now have ${guy.stats.currentHealth} HP`)
-            
+            afterBagel()
         }
-        
-        
-    }
-}
-const runOne = () => {
-    if(Math.random() > .5){
-        console.log("You have successfully become a wimp, and have escaped")
-        run = true
-    } else {
-        console.log("You fail to escape but are still a coward.")
+        const afterBagel = () => {
+            if(fightBasics === "n"){
+                console.log("Umm why is this an option?")
+            } else if (fightBasics === "a"){
+                console.log(jeremyAttack)
+                console.log(enemyAttack)
+                enemy.health -= jeremyAttack // it stops on this line
+                console.log(`You hit for ${jeremyAttack} damage!`)
+            } else if (fightBasics === "r"){
+                if(Math.random() > .5){
+                    console.log("You have successfully become a wimp, and have escaped")
+                    break
+                } else {
+                    console.log("You fail to escape but are still a coward.")
+                }
+            } else if (fightBasics === "i"){
+                console.log(print()) // later make the inventory interactive unlike a bitch who got lazy (me)
+            } else if (fightBasics === "k"){
+                console.log("There's lots of ways out for cowards, but this one is common.")
+                    process.exit()                 // the time out might not work and may just skip on to the next thing
+            }
+            if(enemy.health <= 0){
+                guy.inventory.push(loserForestEnemyLoot[0,1,2])
+                console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
+            } else {
+                console.log("does this work?")
+                console.log(`The ${enemy.name} attacks!`)
+                guy.stats.currentHealth -= enemyAttack // it stops on this line
+                console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
+                console.log(`You now have ${guy.stats.currentHealth} HP`)
+                 
+            }
+
+        }
     }
 }
 
@@ -308,40 +305,3 @@ while(isAlive === true && hasWon === false){
 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

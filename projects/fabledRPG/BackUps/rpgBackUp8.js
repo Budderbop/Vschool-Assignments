@@ -98,7 +98,7 @@ const loserForestEncounter = () => {
 const loserForestFight = () => {
     const random = Math.floor(Math.random()* 3)
     const enemy = loserForestEnemiesArray[random]
-    let run = false
+    let run
     console.log("Enemy: ", enemy)
     while(isAlive = true && enemy.health > 0 && !run){
         if (guy.stats.currentHealth <= 0){
@@ -114,45 +114,44 @@ const loserForestFight = () => {
             console.log("How scrumptious! You gain 100 health")
             console.log(`You now have ${guy.stats.currentHealth} HP`)
         }  else if(bagels <= 0){
-            // console.log("You look, but find no more bagels, today is a sad day.")
+            console.log("You look, but find no more bagels, today is a sad day.")
         }
-        
-        if(fightBasics === "n"){
-            console.log("Umm why is this an option?")
-        } else if (fightBasics === "a"){
-            console.log(`Your Damage: ${jeremyAttack}`)
-            console.log(`Enemy Damage: ${enemyAttack}`)
-            enemy.health -= jeremyAttack 
-            console.log(`The ${enemy.name} now has ${enemy.health} HP`)
-            console.log(`You hit for ${jeremyAttack} damage!`)
-        } else if (fightBasics === "r"){
-            runOne(run)
-        } else if (fightBasics === "i"){
-            console.log(print()) // later make the inventory interactive unlike a bitch who got lazy (me)
-        } else if (fightBasics === "k"){
-            console.log("There's lots of ways out for cowards, but this one is common.")
-            process.exit()                 // the time out might not work and may just skip on to the next thing
-        }
-        if(enemy.health <= 0){
-            guy.inventory.push(loserForestEnemyLoot[0,1,2])
-            console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
-        } else {
-            console.log(`The ${enemy.name} attacks!`)
-            guy.stats.currentHealth -= enemyAttack // it stops on this line
-            console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
-            console.log(`You now have ${guy.stats.currentHealth} HP`)
-            
-        }
+         
         
         
-    }
-}
-const runOne = () => {
-    if(Math.random() > .5){
-        console.log("You have successfully become a wimp, and have escaped")
-        run = true
-    } else {
-        console.log("You fail to escape but are still a coward.")
+            if(fightBasics === "n"){
+                console.log("Umm why is this an option?")
+            } else if (fightBasics === "a"){
+                console.log(`Your Damage: ${jeremyAttack}`)
+                console.log(`Enemy Damage: ${enemyAttack}`)
+                enemy.health -= jeremyAttack 
+                console.log(`The ${enemy.name} now has ${enemy.health} HP`)
+                console.log(`You hit for ${jeremyAttack} damage!`)
+            } else if (fightBasics === "r"){
+                if(Math.random() > .5){
+                    console.log("You have successfully become a wimp, and have escaped")
+                    run = true
+                } else {
+                    console.log("You fail to escape but are still a coward.")
+                }
+            } else if (fightBasics === "i"){
+                console.log(print()) // later make the inventory interactive unlike a bitch who got lazy (me)
+            } else if (fightBasics === "k"){
+                console.log("There's lots of ways out for cowards, but this one is common.")
+                    process.exit()                 // the time out might not work and may just skip on to the next thing
+            }
+            if(enemy.health <= 0){
+                guy.inventory.push(loserForestEnemyLoot[0,1,2])
+                console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
+            } else {
+                console.log(`The ${enemy.name} attacks!`)
+                guy.stats.currentHealth -= enemyAttack // it stops on this line
+                console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
+                console.log(`You now have ${guy.stats.currentHealth} HP`)
+                 
+            }
+
+        
     }
 }
 
@@ -308,40 +307,3 @@ while(isAlive === true && hasWon === false){
 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
