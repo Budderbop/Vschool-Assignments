@@ -1,7 +1,6 @@
+// idea/ after dying say, would you like to keep your soul and move into another dimensions Jeremy?Y = start again after all the setup
+// N = "Fine then, die."
 // timer for dodging or doing critical strikes or for fun
-// this is to try and meet the requirements and have it work, FabledRPG will be the completely more intense version that may not work yay
-
-// need to fix damage so its possible for me to die
 
 const readLine = require("readline-sync")
 
@@ -9,17 +8,16 @@ const print = () => {
     console.log(`
     Your Name: ${guy.name} 
     Inventory: ${guy.inventory} 
-    Health: ${guy.stats.currentHealth} `)
+    Health: ${guy.stats.health} `)
 }
 let isAlive = true
-let isDay = false   // fun to make mobs more common at night, impliment later
+let isDay = false
 let bagels = 0
 const guy = {
     name: "Jeremy",
     inventory: [],
     stats: {
-        maxHealth: 102,
-        currentHealth: 102,
+        health: 102,
         healthRegen: 0, // just if i decide to impliment it later
         strength: 10,
         stamina: 10, // possibly determines number of special attacks, and the more stam the more likely to successfully retreat, how fast you regen stam as well
@@ -44,18 +42,14 @@ const anHonorableDeath = () => {
     const honorableDecision = readLine.keyInSelect(["Fight once more!"], null, {cancel: `Enjoy a longer nap.`})
     if(honorableDecision === 0){
         console.log("You have reincarnated as JEREMY!!!")
-        loserForest() // find a way to reset everything or at least items
     }
     else {
         console.clear()
-        console.log("Goodbye Jeremy") 
+        console.log("Goodbye Jeremy")
+        setTimeout(function(){  /// the time out may not work and just move on to the next thing
             process.exit()
+        }, 4000);
         
-    }
-}
-const brianEncounter = () => {
-    if (Math.random() < .1){
-        bagels + 2
     }
 }
 
@@ -78,7 +72,7 @@ const flyingBabyJellyFish = new LoserForestEnemies("Flying Baby JellyFish", 46, 
 const loserForestEnemiesArray = [boar, anOldMan, flyingBabyJellyFish]
 
 const loserForestEncounter = () => {
-    if (Math.random() < .2){
+    if (Math.random() > .2){
         console.log("You found an enemy!")
         const hello = readLine.keyInSelect(["Continue"], null, {cancel: `Die like a wimp.`})
         if(hello === 0){
@@ -96,7 +90,7 @@ const loserForestFight = () => {
     const enemy = loserForestEnemiesArray[random]
     console.log("Enemy: ", enemy)
     while(isAlive = true && enemy.health > 0){
-        if (guy.stats.currentHealth <= 0){
+        if (jeremy.health <= 0){
             let isAlive = false
             anHonorableDeath()
         }
@@ -106,16 +100,13 @@ const loserForestFight = () => {
         if(fightBasics === "b" && bagels >= 1){
             bagels - 1
             console.log("How scrumptious! You gain 100 health")
-            guy.stats.currentHealth + 50
-            console.log(`You now have ${guy.stats.currentHealth} HP`)
+            jeremy.health + 100
+            console.log(`You now have ${jeremy.health} HP`)
         }
         if(fightBasics === "n"){
             console.log("Umm why is this an option?")
         } else if (fightBasics === "a"){
-            console.log(jeremyAttack)
-            console.log(enemyAttack)
-            enemy.health - jeremyAttack // it stops on this line
-            console.log(`You hit for ${jeremyAttack} damage!`)
+            enemy.health - jeremyAttack
         } else if (fightBasics === "r"){
             if(Math.random() > .5){
                 console.log("You have successfully become a wimp, and have escaped")
@@ -127,17 +118,18 @@ const loserForestFight = () => {
             console.log(print()) // later make the inventory interactive unlike a bitch who got lazy (me)
         } else if (fightBasics === "k"){
             console.log("There's lots of ways out for cowards, but this one is common")
-                process.exit()                 // the time out might not work and may just skip on to the next thing
+            setTimeout(function(){
+                process.exit()
+            }, 4000);                  // the time out might not work and may just skip on to the next thing
         }
         if(enemy.health <= 0){
             guy.inventory.push(loserForestEnemyLoot[0,1,2])
             console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
         } else {
-            console.log("does this work?")
-            console.log(`The ${enemy.name} attacks!`)
-            guy.stats.currentHealth - enemyAttack // it stops on this line
-            console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
-            console.log(`You now have ${guy.stats.currentHealth} HP`)
+             // how do i console.log how much damage it does when the number is random everytime
+            console.log(`The ${enemy} attacks!`)
+            jeremy.health - enemyAttack
+            console.log(`You now have ${jeremy.health} HP`)
              
         }
     }
@@ -274,18 +266,14 @@ setTimeout(function(){
 
 const loserForest = () => {
 while(isAlive === true && hasWon === false){
-   const userBasics = readLine.keyIn(`Do something! Walk(w) , Rest(r) , Print Info(p) , Quit/Die Like A Coward(q) `, {limit: 'w r p q'})
+   const userBasics = readLine.keyIn(`Do something! Walk(w) , Perform A Strategic Retreat(r) , Print Info(p) , Quit/Die Like A Coward(q) `, {limit: 'w r p q'})
     if(userBasics === "w"){
         console.log("You walk a little") // more stamina makes you walk farther, find more stuff
         loserForestEncounter() // mobs
         loserForestTrash() //bad loot chance
         brianEncounter()
     } else if (userBasics === "r"){
-        guy.stats.currentHealth + 200  // add a way to increase rest amount and give mana as well or other stuff
-        if(guy.stats.currentHealth > guy.stats.maxHealth){
-            guy.stats.currentHealth = guy.stats.maxHealth
-            console.log(`You have healed and now have ${guy.stats.currentHealth} HP`) // this is probably not working oh well
-        }
+        battleRetreat()
     } else if (userBasics === "p"){
         console.log(print())
     } else if (userBasics === "q"){
@@ -295,40 +283,3 @@ while(isAlive === true && hasWon === false){
 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

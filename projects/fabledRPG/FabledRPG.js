@@ -1,7 +1,4 @@
 // timer for dodging or doing critical strikes or for fun
-// this is to try and meet the requirements and have it work, FabledRPG will be the completely more intense version that may not work yay
-
-// need to fix damage so its possible for me to die
 
 const readLine = require("readline-sync")
 
@@ -295,30 +292,6 @@ while(isAlive === true && hasWon === false){
 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
