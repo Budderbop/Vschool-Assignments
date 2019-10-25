@@ -65,18 +65,28 @@
 // }
 
 // console.log(namesThatMatter, occupations)
-const matrix = []
-for (i = 0; i < 3; i++){
-    matrix.push([])
-    for (j = 0; j < 3; j++){
-        matrix[i].push(0)
+// const matrix = []
+// for (i = 0; i < 3; i++){
+//     matrix.push([])
+//     for (j = 0; j < 3; j++){
+//         matrix[i].push(0)
         
-}
-}
-console.log(matrix)
-for (i = 0; i < 3; i++){
-    for(j = 0; j < 3; j++){
-        matrix[i][j] = "x"
+// }
+// }
+// console.log(matrix)
+// for (i = 0; i < 3; i++){
+//     for(j = 0; j < 3; j++){
+//         matrix[i][j] = "x"
+//     }
+// }
+// console.log(matrix)
+const n = 10
+const matrix1 = []
+for(let i = 0; i < n; i++){
+    let matrix2 = []
+    for(j = 0; j < n; j++){
+        matrix2[j] = (j + 1) * (i + 1)
     }
+    matrix1[i] = matrix2
 }
-console.log(matrix)
+console.log(matrix1)
