@@ -1,6 +1,14 @@
+body {
+    margin: 0;
+}
 .sideBar {
-    height: 100%;
-    width: 10%;
+    height: 100vh;
+    width: 8%;
     border: 1px solid black;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
 }
 

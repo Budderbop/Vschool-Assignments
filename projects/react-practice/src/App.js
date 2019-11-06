@@ -1,6 +1,6 @@
 import React from "react"
-import Main from "./Main"
-import SideBar from "./SideBar"
+import Main from "./components/Main"
+import SideBar from "./components/SideBar"
 
 const App = () => {
     

@@ -4,11 +4,11 @@ import "../styles/sideBar.css"
 const SideBar = () => {
     return (
         <div className="sideBar">
-            <div>Hey</div>
-            <div>this</div>
+            <div>Home</div>
+            <div>Search</div>
             <div>is</div>
             <div>a</div>
-            <div>sidebar</div>
+            <div>Contact Us(auto scrolls to bottom)</div>
         </div>
     )
 }
