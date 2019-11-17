@@ -10,5 +10,12 @@ body {
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
+    background: #666666;
+    position: fixed;
+}
+
+.sideBar-buttons {
+    border: 1px solid black;
+    background: white;
 }
 
