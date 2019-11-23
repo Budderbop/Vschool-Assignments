@@ -1,0 +1,37 @@
+Salt Lake O.C.Tanner Meetup
+
+Understand the problem, outputs, tests. Solidify by explaining the 
+problem to someone else. Illustrate paths (arrows, circles)
+Avoid temptation to just code, and instead come up with a plan.
+
+Check an Array for Even Nubmers
+1. Check to make sure input is an array.
+2. Create a coutner variable.
+3. Loop through the array
+4. Check to tsee if the item in the array is actually a number. If not, Ignore it?
+5. Run each number through this formula => n % 2
+6. Check if the result is zero, if it is, then increment the counter variable.
+7. 
+
+Execute the plan.
+
+Can you check the results?
+Is there another way to solve the problem?
+Can you see a more efficient way?
+
+Data Structures
+
+Are the way we store and retrieve data.
+Computers store this data in memory.
+The data structure is HOW this data is stored in the computer's memoryl.
+
+Why and How of Data Structures
+How much data do you need to store?
+How often to you need to access that data?
+Do you need access?
+Do you need to add data?
+Do you need to sort it?
+Delete?
+
+Depth First Search
+Breadth-FIrst Search

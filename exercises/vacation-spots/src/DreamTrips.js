@@ -5,15 +5,16 @@ const DreamTrips = (props) => {
     
     return (
         <div>
-            <h1><pre>
-                Spot 1:Location(s): {props.place}
+            <h1>
+                <pre>
+                Spot :Location(s): {props.place}
 
                 Cost: {props.cost}
-                
+
                 When: {props.timeToGo}
-            </pre></h1>
-            <h1>Spot 2:</h1>
-            <h1>Spot 3:</h1>
+                </pre>
+            </h1>
+            
         </div>
     )
 }

@@ -241,7 +241,7 @@ else {
     aCowardsDeath()
 }
 
-console.log("Now, hurry up and start your journey. I know you can do it.                                                                 Haaa he's so screwed, huh, is this still on?")
+console.log("Now, hurry up and start your journey. I know you can do it.                                                                 Haaa he's so screwed!")
 
 const hello3 = readLine.keyInSelect(["Start Your Adventure!"], null, {cancel: `Die`})
 if(hello3 === 0){
