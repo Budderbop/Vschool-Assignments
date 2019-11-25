@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+}
+.NavBarMain{
+    width: 100 vw;
+    height: 36px;
+    border: 1px solid black;
+
+}
