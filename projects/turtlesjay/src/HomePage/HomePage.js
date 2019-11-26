@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import NavBar from './NavBar/NavBar'
+import PageSelection from './PageSelection/PageSelection'
 
 class HomePage extends Component {
     
@@ -7,6 +8,7 @@ class HomePage extends Component {
         return(
             <div>
                 <NavBar />
+                <PageSelection />
             </div>
         )
     }

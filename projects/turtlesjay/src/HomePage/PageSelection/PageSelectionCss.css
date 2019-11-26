@@ -1,0 +1,28 @@
+#pageSelectionMain{
+    margin-top: 16px;
+    height: 160px;
+    width: 100%;
+    border: black 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.smallLink{
+    height: 80px;
+    width: 24%;
+}
+
+#galleryLink{
+    height: 100px;
+    width: 32%;
+    border: 1px solid black;
+}
+
+#storeLink{
+    border: 1px solid green;
+}
+
+#projectsLink{
+    border: 1px solid red;
+}

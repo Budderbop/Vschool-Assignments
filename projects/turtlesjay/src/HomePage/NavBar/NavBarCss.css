@@ -1,9 +1,88 @@
 body{
     margin: 0;
 }
-.NavBarMain{
-    width: 100 vw;
-    height: 36px;
-    border: 1px solid black;
+.topLine{
+    width: 100%;
+    height: 12px;
+    background-color: turquoise;
+    border-radius: 18px;
+}
+                /* NAVBARMAIN START*/
+.navBarMain{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 60px
 
 }
+
+#homeTitle{
+    text-align: center;
+    align-self: center;
+    font-size: 36px;
+    color: turquoise;
+    background: black;
+    border-radius: 18px;
+}
+
+#socialMedia{
+    /* border: 1px green solid; */
+    /* background-image: url('./../../Assets/Icons/googleIcon.png');
+    background-size: cover; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mediaIcons{
+    border: black 1px solid;
+    padding: 6px;
+}
+        /* PROFILE START */
+#profileSection{
+    /* border: 1px solid blue; */
+    padding-top: 10px
+}
+
+#profileDivider{
+    height: 32%;
+    border: 2px solid black;
+    background-color: turquoise;
+    margin: 2px;
+}
+
+#loginButton{
+    text-align: center;
+    font-size: 16px;
+}
+
+#profileDivider2{
+    height: 35%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+}
+
+#profileButton{
+    border: 2px black solid;
+    width: 45%;
+    background-color: turquoise;
+}
+
+#cartButton{
+    width: 45%;
+    border: 2px black solid;
+    background-color: turquoise;
+}
+
+        /* PROFILE END */
+
+#navSlogan{
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+                /* NAVBARMAIN END */
