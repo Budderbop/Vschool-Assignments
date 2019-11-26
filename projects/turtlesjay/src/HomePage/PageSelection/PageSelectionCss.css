@@ -1,6 +1,6 @@
 #pageSelectionMain{
     margin-top: 16px;
-    height: 160px;
+    height: 180px;
     width: 100%;
     border: black 1px solid;
     display: flex;
@@ -8,13 +8,25 @@
     align-items: center;
 }
 
+
 .smallLink{
-    height: 80px;
+    height: 100px;
     width: 24%;
 }
 
+.smallLinkTitle{
+    height: 16px;
+    border-bottom: 1px solid black;
+}
+
+.top{
+    position: relative;
+    top: -40px;
+    text-align: center;
+}
+
 #galleryLink{
-    height: 100px;
+    height: 120px;
     width: 32%;
     border: 1px solid black;
 }

@@ -26,7 +26,7 @@ class NavBar extends Component{
                     </div>
                 </div>
                 <div id='navSlogan'>Quote Of The Day</div>
-                <div id='navSlogan'>Two Sandwiches Are Certainly Better Than No Sanwiches. -- Buddha</div>
+                <div id='navSlogan'>Two Sandwiches Are Certainly Better Than No Sandwiches. -- Buddha</div>
             </div>
         )
     }

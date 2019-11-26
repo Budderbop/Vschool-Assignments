@@ -5,9 +5,9 @@ class PageSelection extends Component{
     render(){
         return(
             <div id='pageSelectionMain'>
-                <div id='storeLink' className='smallLink'>Store</div>
-                <div id='galleryLink' >Gallery</div>
-                <div id='projectsLink' className='smallLink'>Projects</div>
+                <div id='storeLink' className='smallLink'><p className='top'>Store</p></div>
+                <div id='galleryLink'><p className='top'>Gallery</p></div>
+                <div id='projectsLink' className='smallLink'><p className='top'>Projects</p></div>
             </div>
         )
     }
