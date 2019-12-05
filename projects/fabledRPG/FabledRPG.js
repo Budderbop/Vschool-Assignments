@@ -102,7 +102,7 @@ const loserForestFight = () => {
         const fightBasics = readLine.keyIn(`A(n) ${enemy.name} has found you! What do you do? Nothing(n) Attack(a) Try to eat a bagel(b) Retreat like a coward(r) Check Inventory(i) Kill Yourself(k)`, {limit: 'n a b r i k'})//you fail to escape
         if(fightBasics === "b" && bagels >= 1){
             bagels - 1
-            console.log("How scrumptious! You gain 100 health")
+            console.log("How scrumptious! You gain 50 health")
             guy.stats.currentHealth + 50
             console.log(`You now have ${guy.stats.currentHealth} HP`)
         }
@@ -111,12 +111,14 @@ const loserForestFight = () => {
         } else if (fightBasics === "a"){
             console.log(jeremyAttack)
             console.log(enemyAttack)
-            enemy.health - jeremyAttack // it stops on this line
+            enemy.health = enemy.health - jeremyAttack // it stops on this line
             console.log(`You hit for ${jeremyAttack} damage!`)
+            console.log(`The ${enemy.name} has ${enemy.health} HP left!`)
         } else if (fightBasics === "r"){
             if(Math.random() > .5){
                 console.log("You have successfully become a wimp, and have escaped")
                 break
+                // let inFight = true
             } else {
                 console.log("You fail to escape but are still a coward.")
             }
@@ -132,7 +134,7 @@ const loserForestFight = () => {
         } else {
             console.log("does this work?")
             console.log(`The ${enemy.name} attacks!`)
-            guy.stats.currentHealth - enemyAttack // it stops on this line
+            guy.stats.currentHealth -= enemyAttack // it stops on this line
             console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
             console.log(`You now have ${guy.stats.currentHealth} HP`)
              
@@ -271,7 +273,7 @@ setTimeout(function(){
 
 const loserForest = () => {
 while(isAlive === true && hasWon === false){
-   const userBasics = readLine.keyIn(`Do something! Walk(w) , Rest(r) , Print Info(p) , Quit/Die Like A Coward(q) `, {limit: 'w r p q'})
+   const userBasics = readLine.keyIn(`Do something! Walk(w) , Rest(r) , Character Info(i) , Quit/Die Like A Coward(q) `, {limit: 'w r p q'})
     if(userBasics === "w"){
         console.log("You walk a little") // more stamina makes you walk farther, find more stuff
         loserForestEncounter() // mobs
@@ -283,7 +285,7 @@ while(isAlive === true && hasWon === false){
             guy.stats.currentHealth = guy.stats.maxHealth
             console.log(`You have healed and now have ${guy.stats.currentHealth} HP`) // this is probably not working oh well
         }
-    } else if (userBasics === "p"){
+    } else if (userBasics === "i"){
         console.log(print())
     } else if (userBasics === "q"){
         aCowardsDeath()

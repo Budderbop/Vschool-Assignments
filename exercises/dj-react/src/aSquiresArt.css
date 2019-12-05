@@ -1,0 +1,29 @@
+.squire {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.grid-boy{
+    display: grid;
+    margin: 200px;
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+    gap: 60px;
+}
+
+.buttons-box {
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    width: 64px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.buttons:hover{
+    cursor: pointer;
+}
