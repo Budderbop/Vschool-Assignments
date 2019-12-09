@@ -18,7 +18,7 @@ const guy = {
         maxHealth: 102,
         currentHealth: 102,
         healthRegen: 0, // just if i decide to impliment it later
-        strength: 10,
+        strength: 30, //default 10 but changing to 30 to make it easier to test
         stamina: 10, // possibly determines number of special attacks, and the more stam the more likely to successfully retreat, how fast you regen stam as well
         defense: 0,  //reduce all damage, poison, ,, armor still only does one type of defense.
         magicPower: 10,
@@ -131,8 +131,9 @@ const loserForestFight = () => {
         if(enemy.health <= 0){
             guy.inventory.push(loserForestEnemyLoot[0,1,2])
             console.log(`You have gotten ${loserForestEnemyLoot[0,1,2]}`)
+            break
         } else {
-            console.log("does this work?")
+            // console.log("does this work?")
             console.log(`The ${enemy.name} attacks!`)
             guy.stats.currentHealth -= enemyAttack // it stops on this line
             console.log(`The ${enemy.name} hits for ${enemyAttack} damage!`)
@@ -273,7 +274,7 @@ setTimeout(function(){
 
 const loserForest = () => {
 while(isAlive === true && hasWon === false){
-   const userBasics = readLine.keyIn(`Do something! Walk(w) , Rest(r) , Character Info(i) , Quit/Die Like A Coward(q) `, {limit: 'w r p q'})
+   const userBasics = readLine.keyIn(`Do something! Walk(w) , Rest(r) , Character Info(i) , Quit/Die Like A Coward(q) `, {limit: 'w r i q'})
     if(userBasics === "w"){
         console.log("You walk a little") // more stamina makes you walk farther, find more stuff
         loserForestEncounter() // mobs
