@@ -19,20 +19,20 @@ class DJ extends React.Component {
         // }).bind(this)
     }
 
-    // toggleBlack = () => {
-    //     for ( let i = 0; i < this.state.colours.length; i++ ){
-    //         if(this.state.colours[0] === "white"){
-    //             this.setState({
-    //                 colours: ["black", "black", "black", "black"]
-    //             })
-    //         } else if (this.state.colours[0] === "black"){
-    //             this.setState({
+    toggleBlack = () => {
+        for ( let i = 0; i < this.state.colours.length; i++ ){
+            if(this.state.colours[0] === "white"){
+                this.setState({
+                    colours: ["black", "black", "black", "black"]
+                })
+            } else if (this.state.colours[0] === "black"){
+                this.setState({
                     
-    //             })
-    //         }
+                })
+            }
             
-    //     }
-    // }
+        }
+    }
 
     // toggleBlack = () => {
     //     this.state.colours[0] === "white" ?
