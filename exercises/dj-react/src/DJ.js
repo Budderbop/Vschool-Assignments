@@ -34,6 +34,21 @@ class DJ extends React.Component {
         }
     }
 
+    toggleWhite = () => {
+        for ( let i = 0; i < this.state.colours.length; i++ ){
+            if(this.state.colours[0] === "black"){
+                this.setState({
+                    colours: ["white", "white", "white", "white"]
+                })
+            } else if (this.state.colours[0] === "white"){
+                this.setState({
+                    
+                })
+            }
+            
+        }
+    }
+
     // toggleBlack = () => {
     //     this.state.colours[0] === "white" ?
     //     this.state.colours.forEach({colours: "black"}):
@@ -50,7 +65,7 @@ class DJ extends React.Component {
             <div>
                 <div className='buttons-box'>
                     <div className='buttons'  id='' onClick={this.toggleBlack}></div>
-                    <div className='buttons'  id=''></div>
+                    <div className='buttons'  id='' onClick={this.toggleWhite}></div>
                     <div className='buttons'  id=''></div>
                     <div className='buttons'  id=''></div>
                 </div>
