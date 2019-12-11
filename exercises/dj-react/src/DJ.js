@@ -27,36 +27,45 @@ class DJ extends React.Component {
                 })
             } else if (this.state.colours[0] === "black"){
                 this.setState({
-                    
-                })
-            }
-            
-        }
-    }
-
-    toggleWhite = () => {
-        for ( let i = 0; i < this.state.colours.length; i++ ){
-            if(this.state.colours[0] === "black"){
-                this.setState({
                     colours: ["white", "white", "white", "white"]
                 })
-            } else if (this.state.colours[0] === "white"){
-                this.setState({
-                    
-                })
             }
             
         }
     }
 
-    // toggleBlack = () => {
-    //     this.state.colours[0] === "white" ?
-    //     this.state.colours.forEach({colours: "black"}):
-    //     this.state.colours.forEach({colours: "white"})
-    // }
+    togglePurple = () => {
+        const newArr = this.state.colours
+        if (newArr[1] !== "purple"){newArr.fill("purple", 0, 2)
+        } else {newArr.fill("white")}
+        this.setState({
+            colours: newArr
+        })
+    }
+
+    toggle2Blue = () => {
+        const newArr = this.state.colours
+        newArr[2]==="blue"? newArr[3]="blue" : newArr[2]="blue"
+        this.setState({colours: newArr})
+    }
+
+    toggleRotate = () => {
+        const newArr = [...this.state.colours]
+        newArr[0] = this.state.colours[1]
+        newArr[1] = this.state.colours[3]
+        newArr[3] = this.state.colours[2]
+        newArr[2] = this.state.colours[0]
+        this.setState({colours: newArr})
+    }
     
+    // false || (return me)
+
+    // true && (return me)
+
+    // newArr[i] == "purple" && setState("dog")
+
     render(){
-        console.log(this.state.colours)
+        // console.log(this.state.colours)
         const squares = this.state.colours.map(square => {
             return <Squire color={square} />
         })
@@ -65,9 +74,9 @@ class DJ extends React.Component {
             <div>
                 <div className='buttons-box'>
                     <div className='buttons'  id='' onClick={this.toggleBlack}></div>
-                    <div className='buttons'  id='' onClick={this.toggleWhite}></div>
-                    <div className='buttons'  id=''></div>
-                    <div className='buttons'  id=''></div>
+                    <div className='buttons'  id='' onClick={this.togglePurple}></div>
+                    <div className='buttons'  id='' onClick={this.toggle2Blue}></div>
+                    <div className='buttons'  id='' onClick={this.toggleRotate}></div>
                 </div>
             <div className='grid-boy'>
                 {squares}
