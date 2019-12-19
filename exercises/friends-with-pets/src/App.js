@@ -1,6 +1,6 @@
 import React from "react"
 import FriendList from "./FriendList"
-import style from "./style.css"
+import "./style.css"
 
 const App = () => {
     return (

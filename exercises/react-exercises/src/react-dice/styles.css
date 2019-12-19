@@ -1,0 +1,22 @@
+#dice {
+    width: 64px;
+    height: 64px;
+    border: 1px solid black;
+    font-size: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+#selector{
+    align-content: center;
+    text-align: center;
+    height: 5vh;
+
+}
+
+#dieContainer{
+    top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
